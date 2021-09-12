@@ -1,1 +1,28 @@
-
+{
+	"name": "Ampache",
+	"release": "12.2-RELEASE",
+	"artifact": "https://github.com/Michael-T-L/iocage-plugin-ampache.git",
+	"properties": {
+		"vnet": 1,
+		"dhcp": 1
+	},
+	"pkgs": [
+		"apache24",
+		"mariadb103-server",
+		"ampache-php74",
+		"php74-xml",
+		"php74-dom",
+		"php74-intl"
+	],
+	"packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+	"fingerprints": {
+		"iocage-plugins": [
+			{
+				"function": "sha256",
+				"fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+			}
+		]
+	},
+	"revision": "0",
+	"official": false
+}
