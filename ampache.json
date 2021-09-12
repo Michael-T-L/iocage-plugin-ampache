@@ -9,7 +9,6 @@
 	"pkgs": [
 		"apache24",
 		"mysql80-server",,
-		"ampache-php74",
 		"mod_php74",
 		"php74-xml",
 		"php74-dom",

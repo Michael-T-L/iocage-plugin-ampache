@@ -17,6 +17,10 @@ if [ -e "/etc/iocage-env" ] ; then
 	echo "Using NAT Address: $IOCAGE_PLUGIN_IP"
 fi
 
+#install ampache
+cd /usr/local/www
+git clone -b release4 https://github.com/ampache/ampache.git ampache
+
 # Configure apache and php
 rm -rf /usr/local/www/apache24/data
 ln -s /usr/local/www/ampache/public /usr/local/www/apache24/data
