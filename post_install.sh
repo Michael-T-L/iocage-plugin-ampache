@@ -23,8 +23,8 @@ ln -s /usr/local/www/ampache/public /usr/local/www/apache24/data
 
 cp /usr/local/etc/php.ini-production /usr/local/etc/php.ini
 
-sed -i '' 's/.*LoadModule rewrite_module\s*libexec/apache24/mod_rewrite.so/LoadModule rewrite_module libexec/apache24/mod_rewrite.so/' /usr/local/etc/apache24/httpd.conf
-sed -i '' 's/DirectoryIndex index.html/DirectoryIndex index.html index.php/' /usr/local/etc/apache24/httpd.conf
+sed -i 's/#LoadModule rewrite_module libexec\/apache24\/mod_rewrite.so/LoadModule rewrite_module libexec\/apache24\/mod_rewrite.so/' /usr/local/etc/apache24/httpd.conf
+sed -i 's/DirectoryIndex index.html/DirectoryIndex index.html index.php/' /usr/local/etc/apache24/httpd.conf
 echo '<FilesMatch "\.php$">    SetHandler application/x-httpd-php</FilesMatch><FilesMatch "\.phps$">    SetHandler application/x-httpd-php-source</FilesMatch>' >> /usr/local/etc/apache24/httpd.conf
 
 # Configure database
